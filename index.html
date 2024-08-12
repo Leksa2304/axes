@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<h1>Расчет растояний осей крепления мебельных полок</h1>
+
+<body>
+<div class="containerDimensionsShelf">
+    <div class="shelfParameters">
+    <label for="productHeight"><h3>Высота изделия по внутреннему размеру, мм</h3></label>
+    <input type="number" id="productHeight">
+
+    <label for="productWidth"><h3>Ширина изделия по внутреннему размеру, мм</h3></label>
+    <input type="number" id="productWidth">
+
+    <label for="numberShelves"><h3>Количество полок, шт</h3></label>
+    <input type="number" id="numberShelves">
+    <p class="hidden text">Заполнте поля и нажмите <b>Enter</b></p>
+</div>
+<div class="containerShelfImg"></div>
+</div>
+
+    <div id="shelfsHeights"></div>
+    <div id="calculation"></div>
+
+
+    <button type="button" class="hidden" id="button">Рассчитать</button>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
