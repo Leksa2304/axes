@@ -99,33 +99,47 @@ numberShelves.addEventListener("keyup", function(event) {
 
     if (event.key === "Enter") {
 
-        enteredShelves = numberShelves.value;
+        enteredShelves = +numberShelves.value;
       
         createFields();
 
         containerShelfImg.innerHTML = "";
         calculationDiv.innerHTML = "";
-       
-
-        if (enteredShelves == 1) {
-          createScheme("img/shelfs1.png", containerShelfImg)
-
-        } else if (enteredShelves == 2) {
-          createScheme("img/shelfs2.png", containerShelfImg)
-        } else if (enteredShelves == 3) {
-          createScheme("img/shelfs3.png", containerShelfImg)
-        } else if (enteredShelves == 4) {
-          createScheme("img/shelfs4.png", containerShelfImg)
-        } else if (enteredShelves == 5) {
-          createScheme("img/shelfs5.png", containerShelfImg)
-        } else if (enteredShelves == 6) {
-          createScheme("img/shelfs6.png", containerShelfImg)
-        } else if (enteredShelves == 7) {
-          createScheme("img/shelfs7.png", containerShelfImg)
-        } else if (enteredShelves == 8) {
-          createScheme("img/shelfs8.png", containerShelfImg)
-        } else if (enteredShelves == 9) {
-          createScheme("img/shelfs9.png", containerShelfImg)
+  
+        switch (enteredShelves) {
+          case 1: 
+          createScheme("img/shelfs1.png", containerShelfImg);
+          break;
+          case 2: 
+          createScheme("img/shelfs2.png", containerShelfImg);
+          break;
+          case 3: 
+          createScheme("img/shelfs3.png", containerShelfImg);
+          break;
+          case 4: 
+          createScheme("img/shelfs4.png", containerShelfImg);
+          break;
+          case 5: 
+          createScheme("img/shelfs5.png", containerShelfImg);
+          break;
+          case 6: 
+          createScheme("img/shelfs6.png", containerShelfImg);
+          break;
+          case 7: 
+          createScheme("img/shelfs7.png", containerShelfImg);
+          break;
+          case 8: 
+          createScheme("img/shelfs8.png", containerShelfImg);
+          break;
+          case 9: 
+          createScheme("img/shelfs9.png", containerShelfImg);
+          break;
+          
+          default:
+            containerShelfImg.innerHTML = "";
+         
+            alert("Количество полок можно установить от 1 до 9. Схема отображения полок в шкафу отключена");
+            break;
         }
     }
   
